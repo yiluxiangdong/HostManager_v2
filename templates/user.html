@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align: center;margin-top: 50px">
+        <label>倒叙排列</label>
+        <input type="radio" id="radio1" name="radio" value="1" checked>是
+        <input type="radio" id="radio2" name="radio" value="0">否
+      <input class="input-lg" id="name">
+      <button class='btn' id="selectbtn">查看用户信息</button></div>
+    <hr>
+    <table class="table" border="1px" bordercolor="#000000" cellspacing="0px" style="border-collapse:collapse">
+      <thead>
+        <tr>
+          <th>用户ID</th>
+          <th>用户名</th>
+          <th>电话</th>
+          <th>身份证</th>
+          <th>修改/删除</th></tr>
+      </thead>
+      <tbody id="resultuser">
+        <tr>
+          <td colspan='5' style='text-align: center'>暂无数据</td></tr>
+      </tbody>
+    </table>
+    <div>
+      <div style="float: right">
+        <ul id="page"></ul>
+      </div>
+      <div style="width: 120px;float: left">
+        <select id="datacount" class="selector">
+          <option value="5">每页显示5条</option>
+          <option value="10">每页显示10条</option>
+          <option value="20">每页显示20条</option>
+          <option value="50">每页显示50条</option></select>
+      </div><div style="width: 150px;float: left" id="usercounts"><label>共计0条</label></div>
+
+    </div>
+  <hr width="6000px">
+   <p id="usersnow">222222222222</p>
+{% endblock %}

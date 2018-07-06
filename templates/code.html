@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<hr>
+<div style="width: 1200px;margin-left: 250px" >
+    <div style="float: left">
+      <textarea id="content" class="text-left" style="width: 500px;height: 250px;"></textarea>
+    </div>
+    <div style="float: left;margin-left: 100px;margin-top: 80px">
+      <button class="button" id="code" >生成二维码</button>
+    </div>
+    <div style="float: right;border:solid black 1px;display: flex;width: 350px;height: 230px;" id="imagecode">
+    </div>
+
+</div>
+{% endblock %}
+

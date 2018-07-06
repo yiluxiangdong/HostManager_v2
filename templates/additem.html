@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+div{
+    padding: 5px;
+}
+</style>
+
+<div style="text-align: center;float: left;margin-left: 230px">
+    <div style="margin-top: 60px">
+        <div>
+            <label class="label-important" style="color: rebeccapurple;font-family: 华文楷体;font-size: large">添加集中式房源</label>
+        </div>
+        <div>
+            运营商:<input type="text" id="landermobile1" >
+        </div>
+         <div style="width: 150px">
+        </div>
+         <div>
+            小区名称:<input type="text" id="newestate1">
+        </div>
+         <div>
+            添加数量:<input type="text" id="housenum1">
+        </div>
+         房租类型:
+             <input type="radio" name="rent_type1" id="zhengzu" value="1">整租
+             <input type="radio" name="rent_type1" id="hezu" value="0">合租
+        </div><button  id="addjz">添加</button><p id="infojz" style="color: red"></p>
+</div>
+
+<div style="text-align: center;float: left;margin-left: 230px">
+    <div style="margin-top: 60px">
+        <div>
+            <label class="label-important" style="color: rebeccapurple;font-family: 华文楷体;font-size: large">添加分散式房源</label>
+        </div>
+        <div>
+            运营商:<input type="text" id="landermobile" >
+        </div>
+         <div style="width: 500px">
+        </div>
+         <div>
+            小区名称:<input type="text" id="newestate">
+        </div>
+         <div>
+            添加数量:<input type="text" id="housenum">
+        </div>
+         房租类型:
+             <input type="radio" name="rent_type" id="zhengzu" value="1">整租
+             <input type="radio" name="rent_type" id="hezu" value="0">合租
+        </div><button  id="addfs">添加</button><p id="infofs" style="color: red"></p>
+</div>
+
+<div style=" float: left;">
+    <div style="margin-top: 60px">
+        <div>
+            <label class="label-important" style="color: rebeccapurple;font-family: 华文楷体;font-size: large">查询房东信息</label>
+        </div>
+        <div>
+            运营商:<input type="text" id="landcontent">
+        </div><button  id="checkland">查询</button>
+        <p id="landinfo" style="color: red"></p>计时器：<input id="startTime" ><button id="start">开始计时</button>
+</div>
+</div>
+{#SELECT id,mobile,merchant_name,payMode  FROM  rms_landlord;#}
+<div >
+    <table class="table "   style="float: right">
+        <thead>
+           <tr>
+               <th>房东ID</th><th>房东电话</th><th>运营商名称</th><th>支付方式</th>
+           </tr>
+        </thead>
+        <tbody id="landresult">
+            <tr>
+               <td colspan="4" style="text-align: center">暂无数据</td>
+           </tr>
+
+        </tbody>
+    </table>
+</div>
+<div style="float: right" id="datacount">
+<label>共计0条</label>
+</div>
+{% endblock %}

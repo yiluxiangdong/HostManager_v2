@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="text-align: center;margin-top: 50px">
+<input class="input-lg" id="housename">
+<button class='btn' id="houseselectbtn">查询房源信息</button></div>
+<hr>
+<table class="table" border="1px" bordercolor="#000000" cellspacing="0px" style="border-collapse:collapse;">
+<thead>
+<tr>
+  th>分店ID</th>
+  <th>房源名称</th>
+  <th>房源状态</th>
+  <th>修改/删除</th></tr><th>房源ID</th>
+  <th>房东电话</th>
+  <th>房东ID</th>
+  <
+</thead>
+<tbody id="resulthouse">
+<tr>
+  <td colspan='7' style='text-align: center'>暂无数据</td></tr>
+</tbody>
+</table>
+<hr>
+{% endblock %}

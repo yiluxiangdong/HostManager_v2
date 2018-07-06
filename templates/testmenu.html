@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static  'js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap-paginator.js' %}"></script>
+  <script src="{% static 'js/table.js' %}"></script>
+</head>
+
+<style>
+nav{
+	width: 100%;
+	height: 100px;
+	background: violet;
+}
+.one{
+	width: 30px;
+	height: 30px;
+	background: red;
+}
+.two{
+	width: 30px;
+	height: 30px;
+	background: orange;
+}
+</style>
+
+
+
+<body>
+    <nav></nav>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+	<script>
+	$("div").click(function(){
+	var color=$(this).css("background");
+	$("nav").css("background",color)
+	})
+</script>
+
+</html>
